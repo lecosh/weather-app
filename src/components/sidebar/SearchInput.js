@@ -31,7 +31,7 @@ export function SearchInput({onData}){
         SetInput(event.target.value);
     }
     async function fetchData(){
-        let urlForCoord = "http://api.openweathermap.org/geo/1.0/direct?q=" + input + "&appid=" + "8c7fb2b547052b3c31f1e1993bf05fa7"
+        let urlForCoord = "https://api.openweathermap.org/geo/1.0/direct?q=" + input + "&appid=" + "8c7fb2b547052b3c31f1e1993bf05fa7"
         setLoad(true);
         await fetch(urlForCoord)
         .then(res => res.json())
