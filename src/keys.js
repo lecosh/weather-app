@@ -1,2 +1,0 @@
-export const REACT_APP_API_KEY='8c7fb2b547052b3c31f1e1993bf05fa7'
-export const WEEK_FORECAST_KEY='cd6c8c9c8f377242357ce2c7121816f1'
