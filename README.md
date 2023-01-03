@@ -12,4 +12,5 @@ Here you can see:
 9. Interactive map
 
 To start application use "npm start"
+
 You can see demo [live demo](https://weather-app-yanm.vercel.app)
