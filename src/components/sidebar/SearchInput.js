@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import searchImg from '../../img/search.svg'
-import {REACT_APP_API_KEY} from '../../keys'
 import { Loader } from '../Loader'
 
 export function SearchInput({onData}){
@@ -32,12 +31,12 @@ export function SearchInput({onData}){
         SetInput(event.target.value);
     }
     async function fetchData(){
-        let urlForCoord = "http://api.openweathermap.org/geo/1.0/direct?q=" + input + "&appid=" + REACT_APP_API_KEY
+        let urlForCoord = "http://api.openweathermap.org/geo/1.0/direct?q=" + input + "&appid=" + "8c7fb2b547052b3c31f1e1993bf05fa7"
         setLoad(true);
         await fetch(urlForCoord)
         .then(res => res.json())
         .then((res)=>{
-            let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + res[0].lat + "&lon=" + res[0].lon + "&appid=" + REACT_APP_API_KEY 
+            let url = "https://api.openweathermap.org/data/2.5/weather?lat=" + res[0].lat + "&lon=" + res[0].lon + "&appid=" + "8c7fb2b547052b3c31f1e1993bf05fa7" 
             fetch(url)
             .then(res => res.json())
             .then(res => {
@@ -59,7 +58,7 @@ export function SearchInput({onData}){
                 onData(data);
             })
             .then(() =>{
-                let urlForWeekForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=" + res[0].lat + "&lon=" + res[0].lon + "&appid=" + REACT_APP_API_KEY;
+                let urlForWeekForecast = "https://api.openweathermap.org/data/2.5/forecast?lat=" + res[0].lat + "&lon=" + res[0].lon + "&appid=" + "8c7fb2b547052b3c31f1e1993bf05fa7";
                 fetch(urlForWeekForecast)
                 
                 .then(res => res.json())
