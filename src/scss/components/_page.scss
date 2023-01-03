@@ -1,0 +1,99 @@
+.page{
+    position: fixed;
+    left: 30%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding-left: 50px;
+    padding-top: 30px;
+    &-all-data{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &-title{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    &-card{
+        width: 200px;
+        height: 200px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
+        border-radius: 10px;
+        padding: 15px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        cursor: pointer;
+        &:hover{
+            transform: scale(1.05);
+            transition: ease-in .2s all;
+        }
+    }
+
+    &-humidity{
+        position: relative;
+    }
+    &-card--title{
+        font-size: 16px;
+        color: gray;
+        margin-bottom: 20px;
+    }
+    &-humidity-result{
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+    &-humidity-state{
+        margin-bottom: 10px;
+        width: 120px;
+    }
+    &-humidity-bar{
+        position: absolute;
+        height: 115px;
+        width: 30px;
+        padding: 5px;
+
+        top: 50%;
+        transform: translateY(-50%);
+        right: 15px;
+        border-radius: 20px;
+        border: 1px solid grey;
+    }
+    &-humidity-inner-bar{
+        width: 20px;
+        position: absolute;
+        bottom: 10px;
+        right: 4px;
+        border-radius: 20px;
+
+        background-color: rgb(86, 91, 224);
+    }
+}
+.page{
+    &-temperature{
+
+    }
+    &-temp-min{
+        width: 45px;
+        height: 45px;
+        margin-right: 20px;
+    }
+    &-temp-max{
+        width: 45px;
+        height: 45px;
+        margin-right: 20px;
+    }
+    &-min-temp{
+        display: flex;
+        align-items: center;
+        &--first{
+            margin-bottom: 20px;
+        }
+    }
+    &-temp{
+        font-size: 40px;
+        width: 20px;
+        &-title{
+            font-size: 16px;
+        }
+    }
+}
